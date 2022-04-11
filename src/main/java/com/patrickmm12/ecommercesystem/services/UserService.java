@@ -1,4 +1,4 @@
-package com.patrickmm12.ecommercesystem;
+package com.patrickmm12.ecommercesystem.services;
 
 import java.util.List;
 import java.util.Optional;

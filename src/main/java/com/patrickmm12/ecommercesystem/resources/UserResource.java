@@ -2,8 +2,8 @@ package com.patrickmm12.ecommercesystem.resources;
 
 import java.util.List;
 
-import com.patrickmm12.ecommercesystem.UserService;
 import com.patrickmm12.ecommercesystem.entities.User;
+import com.patrickmm12.ecommercesystem.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
