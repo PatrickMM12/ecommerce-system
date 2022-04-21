@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.patrickmm12.ecommercesystem.entities.User;
 import com.patrickmm12.ecommercesystem.repositories.UserRepository;
+import com.patrickmm12.ecommercesystem.services.exceptions.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,9 +21,9 @@ public class UserService {
     }
 
     public User findById(Long id) {
-        Optional<User> obj = repository.findById(id);
-        return obj.get();
-    }
+		Optional<User> obj = repository.findById(id);
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
+	}
 
     public User insert(User obj) {
         return repository.save(obj);
